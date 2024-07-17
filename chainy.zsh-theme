@@ -70,7 +70,7 @@ function ip_prompt_info() {
 function git_prompt_info() {
   local ref=$(git symbolic-ref HEAD 2> /dev/null)
   if [[ -n $ref ]]; then
-    echo "$SEP$(parse_git_dirty)${c_reset}"
+    echo "$SEP %F{green}%f $(parse_git_dirty)${c_reset}"
   fi
 }
 
